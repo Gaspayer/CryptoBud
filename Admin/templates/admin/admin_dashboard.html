@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Admin dashboard</h2>
+    <h3>Recent log entries:</h3>
+    <ul>
+        {% for log_entry in log_entries %}
+            <li>{{ log_entry.action_time }}: {{ log_entry.user }} {{ log_entry.get_change_message }}</li>
+        {% empty %}
+            <li>No log entries yet.</li>
+        {% endfor %}
+    </ul>
+    <h3>Content types:</h3>
+    <ul>
+        {% for content_type in content_types %}
+            <li>{{ content_type.name }}</li>
+        {% empty %}
+            <li>No content types yet.</li>
+        {% endfor %}
+    </ul>
+    <h3>Permissions:</h3>
+    <ul>
+        {% for permission in permissions %}
+            <li>{{ permission }}</li>
+        {% empty %}
+            <li>No permissions yet.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

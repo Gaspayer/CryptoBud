@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Create a creator profile</h2>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="bio">Bio</label>
+            <textarea class="form-control" name="bio" rows="5" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="website">Website</label>
+            <input type="url" class="form-control" name="website" required>
+        </div>
+        <div class="form-group">
+            <label for="avatar">Avatar</label>
+            <input type="file" class="form-control-file" name="avatar">
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+{% endblock %}

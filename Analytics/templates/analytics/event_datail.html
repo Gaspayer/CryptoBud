@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Event detail</h2>
+    <p><strong>Name:</strong> {{ event.name }}</p>
+    <p><strong>Timestamp:</strong> {{ event.timestamp }}</p>
+    <p><strong>User:</strong> {{ event.user }}</p>
+    <p><strong>Properties:</strong></p>
+    <ul>
+        {% for key, value in event.properties.items %}
+            <li>{{ key }}: {{ value }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{{ creator.user.username }}'s profile</h2>
+    <img src="{{ creator.avatar.url }}" alt="Avatar">
+    <p><strong>Bio:</strong> {{ creator.bio }}</p>
+    <p><strong>Website:</strong> <a href="{{ creator.website }}" target="_blank">{{ creator.website }}</a></p>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Log entry detail</h2>
+    <p><strong>Action time:</strong> {{ log_entry.action_time }}</p>
+    <p><strong>User:</strong> {{ log_entry.user }}</p>
+    <p><strong>Content type:</strong> {{ content_type_id }}</p>
+    <p><strong>Object id:</strong> {{ log_entry.object_id }}</p>
+    <p><strong>Object repr:</strong> {{ log_entry.object_repr }}</p>
+    <p><strong>Change message:</strong> {{ log_entry.change_message }}</p>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Content types</h2>
+    <ul>
+        {% for content_type in content_types %}
+            <li>{{ content_type.name }}</li>
+        {% empty %}
+            <li>No content types.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

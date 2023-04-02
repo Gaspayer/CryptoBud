@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Log entries</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Action time</th>
+                <th>User</th>
+                <th>Content type</th>
+                <th>Object id</th>
+                <th>Change message</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for log_entry in log_entries %}
+                <tr>
+                    <td>{{ log_entry.action_time }}</td>
+                    <td>{{ log_entry.user }}</td>
+                    <td>{{ log_entry.content_type }}</td>
+                    <td>{{ log_entry.object_id }}</td>
+                    <td>{{ log_entry.get_change_message }}</td>
+                </tr>
+            {% empty %}
+                  <tr>
+                      <td colspan="5">No log entries.</td>
+                  </tr>
+              {% endfor %}
+          </tbody>
+      </table>
+  {% endblock %}

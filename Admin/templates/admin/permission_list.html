@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Permissions</h2>
+    <ul>
+        {% for permission in permissions %}
+            <li>{{ permission }}</li>
+        {% empty %}
+            <li>No permissions.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

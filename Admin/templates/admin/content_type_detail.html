@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Content type detail</h2>
+    <p><strong>Name:</strong> {{ content_type.name }}</p>
+    <p><strong>App label:</strong> {{ content_type.app_label }}</p>
+    <p><strong>Model:</strong> {{ content_type.model }}</p>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Search</h2>
+    <form method="GET" action="{% url 'search_results' %}">
+        <div class="form-group">
+            <input type="text" class="form-control" name="query" placeholder="Enter search query" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+{% endblock %}

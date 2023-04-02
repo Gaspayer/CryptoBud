@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Checkout</h2>
+    {% if error_message %}
+        <p class="text-danger">{{ error_message }}</p>
+    {% endif %}
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="amount">Amount (in cryptocurrency)</label>
+            <input type="number" class="form-control" name="amount" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Pay</button>
+    </form>
+{% endblock %}

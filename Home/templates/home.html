@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Banner section -->
+<section id="banner">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center">
+        <img src="{% static 'img/cryptobud_logo.png' %}" alt="CryptoBud logo" class="img-fluid">
+      </div>
+      <div class="col-md-4">
+        <h1>Welcome to CryptoBud!</h1>
+        <p>The future of crowdfunding, supporting creators, and seamless crypto transactions. With our platform, you'll find a unique blend of innovation and financial freedom that encourages growth and fosters success.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Navigation section -->
+<section id="navigation">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-6">
+        <a href="{% url 'creator:create_creator_profile' %}" class="btn btn-primary btn-lg">Go to Creators Console</a>
+      </div>
+      <div class="col-md-6">
+        <a href="{% url 'creator:create_creator_profile' %}" class="btn btn-success btn-lg">Go to Crowdfunding Console</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- News section -->
+<section id="news">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Latest News</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Bitcoin hits all-time high</h5>
+            <p class="card-text">Bitcoin reached a new all-time high of $65,000 on April 14, 2023.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Ethereum upgrade coming soon</h5>
+            <p class="card-text">Ethereum is set to undergo a major upgrade in the next few months, which could improve its scalability and security.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Dogecoin still going strong</h5>
+            <p class="card-text">Despite its meme origins, Dogecoin continues to gain popularity and has recently been added to several cryptocurrency exchanges.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About section -->
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>About CryptoBud</h2>
+        <p>CryptoBud is a crowdfunding platform for cryptocurrency projects. We provide a platform for creators to raise funds and connect with supporters who share their vision. Our platform is designed to make investing in cryptocurrency simple and accessible for everyone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Custom CSS styles -->
+<style>
+  #banner {
+    background-color: #F5F5F5;
+    padding: 100px 0;
+  }
+
+  #banner h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  #banner p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  #navigation {
+    background-color: #F8F8F8;
+    padding: 50px 0;
+  }
+
+  #news {
+    padding: 50px 0;
+  }
+
+  #news h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  #about {
+    padding: 50px 0;
+  }
+
+  #about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+</style>
+<!-- Bootstrap and custom JS scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+{% endblock %}
