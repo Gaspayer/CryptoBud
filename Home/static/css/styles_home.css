@@ -1,0 +1,56 @@
+#banner {
+  background-color: #F5F5F5;
+  padding: 100px 0;
+}
+
+#banner h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#banner p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+#navigation {
+  background-color: #F8F8F8;
+  padding: 50px 0;
+}
+
+#news {
+  padding: 50px 0;
+}
+
+#news h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+#about {
+  padding: 50px 0;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.classic-button {
+  background-color: transparent;
+  border: 2px solid #4CAF50;
+  color: #4CAF50;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.classic-button:hover {
+    background-color: #3c8f40;
+    border: 2px solid #3c8f40;
+    color: white;
+}
