@@ -26,6 +26,7 @@ urlpatterns = [
     path('Analytics/', include('Analytics.urls')),
     path('Authentication/', include('Authentication.urls')),
     path('Creator/', include('Creator.urls')),
+    path('Crowdfunding/', include('Crowdfunding.urls')),
     path('Messaging/', include('Messaging.urls')),
     #path('Notification/', include('Notification.urls')),
     #path('Transaction/', include('Transaction.urls')),

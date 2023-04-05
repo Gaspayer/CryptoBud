@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'Analytics', # add the Analytics app
     'Authentication', # add the Authentication app
     'Creator', # add the Creator app
+    'Crowdfunding', # add the Crowdfunding app
     'Messaging', # add the Messaging app
     'Notification', # add the Notification app
     'Transaction', # add the Transaction app

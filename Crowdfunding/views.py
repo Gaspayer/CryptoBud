@@ -5,11 +5,28 @@ from .models import Campaign, Pledge
 @login_required
 def create_campaign(request):
     if request.method == 'POST':
-        name = request.POST['name']
+        title = request.POST['title']
         description = request.POST['description']
         goal = request.POST['goal']
+        crypto_address = request.POST['crypto_address']
+        start_date = request.POST['start_date']
         end_date = request.POST['end_date']
-        campaign = Campaign.objects.create(name=name, description=description, goal=goal, end_date=end_date, creator=request.user)
+        creator = request.user
+        image = request.FILES['image']
+
+        # Create a new Campaign object and save it to the database
+        campaign = Campaign(
+            title=title,
+            description=description,
+            goal=goal,
+            crypto_address=crypto_address,
+            start_date=start_date,
+            end_date=end_date,
+            user=user,
+            image=image
+        )
+        campaign.save()
+
         return redirect('campaign_detail', campaign_id=campaign.id)
     else:
         return render(request, 'create_campaign.html')
