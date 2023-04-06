@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.fundraisers-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.fundraiser {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: 300px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.fundraiser h3 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.fundraiser h3 a {
+  color: #333;
+  text-decoration: none;
+}
+
+.fundraiser h3 a:hover {
+  text-decoration: underline;
+}
+
+.fundraiser p {
+  font-size: 16px;
+  color: #666;
+}

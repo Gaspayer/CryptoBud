@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/styles_crowdfunding.css' %}">
+  <div class="container">
+    <h2 class="text-center my-4">{{ fundraiser.title }}</h2>
+    <img src="{{ fundraiser.image.url }}" alt="{{ fundraiser.title }}" style="width: 100%; max-height: 300px; object-fit: cover;">
+    <p><strong>Description:</strong> {{ fundraiser.description }}</p>
+    <p><strong>Goal Amount:</strong> {{ fundraiser.goal_amount }}</p>
+    <p><strong>Crypto Address:</strong> {{ fundraiser.crypto_address }}</p>
+    <p><strong>Start Date:</strong> {{ fundraiser.start_date }}</p>
+    <p><strong>End Date:</strong> {{ fundraiser.end_date }}</p>
+
+    {% if request.user == fundraiser.owner %}
+      <a href="{% url 'edit_fundraiser' fundraiser.id %}" class="btn btn-primary">Edit Fundraiser</a>
+    {% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/styles_crowdfunding.css' %}">
+<link rel="stylesheet" href="{% static 'css/styles_my_fundraisers.css' %}">
+  <h1>My Fundraisers</h1>
+
+  <a href="{% url 'crowdfunding:create_fundraiser' %}" class="btn btn-primary">Create New Fundraiser</a>
+
+  <div class="fundraisers-list">
+    {% for fundraiser in fundraisers %}
+      <div class="fundraiser">
+        <h3><a href="{% url 'crowdfunding:fundraiser_detail' fundraiser_id=fundraiser.id %}">{{ fundraiser.title }}</a></h3>
+        <p>{{ fundraiser.description|truncatechars:100 }}</p>
+      </div>
+    {% empty %}
+      <p>No fundraisers found.</p>
+    {% endfor %}
+  </div>
+{% endblock %}
